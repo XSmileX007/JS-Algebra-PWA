@@ -2,7 +2,7 @@ var cacheName = 'myCache';
 var filesToCache = [
   	'background.png',
 	'nar.png',
-	'header.png',
+	'header.png'
 ];
 
 var myImages = [];
