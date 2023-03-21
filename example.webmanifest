@@ -17,7 +17,7 @@
             "src": "header.png",
             "sizes": "753x185",
             "type": "image/png"
-        },
+        }
     ],
     "start_url": "index.html",
     "display": "fullscreen",
