@@ -5,6 +5,18 @@ var filesToCache = [
 	'header.png',
 ];
 
+var myImages = [];
+myImages.push('screenshot.jpg');
+
+
+var appShellFiles = [
+  'index.html',
+  'app.js',
+  'style.css'
+];
+
+var contentToCache = appShellFiles.concat(myImages);
+
 self.addEventListener('install', function(e) {
   console.log('[Service Worker] Install');
   e.waitUntil(
