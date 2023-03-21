@@ -18,7 +18,7 @@ var appShellFiles = [
 var contentToCache = appShellFiles.concat(myImages);
 
 self.addEventListener('install', function(e) {
-  console.log('[Service Worker] Install');
+  console.log('[Service Worker] Install 1');
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
       console.log('[Service Worker] Caching all: app shell and content');
@@ -28,7 +28,7 @@ self.addEventListener('install', function(e) {
 });
 
 self.addEventListener('install', function(e) {
-  console.log('[Service Worker] Install');
+  console.log('[Service Worker] Install 2');
   e.waitUntil(
     caches.open(cacheName).then(function(cache) {
       console.log('[Service Worker] Caching all: content');
