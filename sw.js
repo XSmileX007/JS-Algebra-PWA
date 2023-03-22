@@ -17,20 +17,6 @@ var appShellFiles = [
 
 var contentToCache = appShellFiles.concat(myImages);
 
-var beforeInstallPrompt = null;
-
-
-function eventHandler(event) {
-  beforeInstallPrompt = event;
-  document.getElementById('installBtn').removeAttribute('disabled');
-}
-function errorHandler(e) {
-  console.log('error: ' + e);
-}
-function install() {
-  if (beforeInstallEvent) beforeInstallPrompt.prompt();
-}
-
 self.addEventListener('install', function (e) {
   console.log('[Service Worker] Install 1');
   e.waitUntil(

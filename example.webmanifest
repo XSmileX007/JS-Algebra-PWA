@@ -2,6 +2,11 @@
     "name": "Example Progressive Web App",
     "short_name": "example",
     "description": "Progressive Web App",
+    "start_url": "https://xsmilex007.github.io/JS-Algebra-PWA/",
+    "scope": "https://xsmilex007.github.io/JS-Algebra-PWA/",
+    "display": "standalone",
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34",
     "icons": [
         {
             "src": "background.png",
@@ -18,9 +23,6 @@
             "sizes": "753x185",
             "type": "image/png"
         }
-    ],
-    "start_url": "index.html",
-    "display": "fullscreen",
-    "theme_color": "#B12A34",
-    "background_color": "#B12A34"
+    ]
+    
 }

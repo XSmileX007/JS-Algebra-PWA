@@ -8,7 +8,23 @@
 <title>Reverted by Bryant Smith</title>
 <script>
   // https://www.modyo.com/developer-tips/display-a-prompt-to-install-pwas
+  var beforeInstallPrompt = null;
+
   window.addEventListener("beforeinstallprompt", eventHandler, errorHandler);
+
+  function eventHandler(event) {
+    beforeInstallPrompt = event;
+    document.getElementById("installBtn").removeAttribute("disabled");
+  }
+
+  function errorHandler(event) {
+    console.log("error: " + event);
+  }
+
+  function install() {
+    if (beforeInstallPrompt) beforeInstallPrompt.prompt();
+  }
+
 </script>
 </head>
 
@@ -53,8 +69,10 @@
 </div>
         <div id="footer"><a href="http://www.bryantsmith.com">web page designer </a> <a href="http://www.bryantsmith.com">bryant smith</a></div>
 
-        <button id="installBtn" onclick="install()" disabled > 
+        <button id="installBtn" onclick="install()" > 
           Install PWA 
       </button>
+
+
 </body>
 </html>
