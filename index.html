@@ -6,6 +6,10 @@
 <link rel="manifest" href="./example.webmanifest">
 <script src="./app.js" defer></script>
 <title>Reverted by Bryant Smith</title>
+<script>
+  // https://www.modyo.com/developer-tips/display-a-prompt-to-install-pwas
+  window.addEventListener("beforeinstallprompt", eventHandler, errorHandler);
+</script>
 </head>
 
 <body>
@@ -48,5 +52,9 @@
         <div class="contentText">Each title is an H1 tag, so choose them carefully :)</div>  
 </div>
         <div id="footer"><a href="http://www.bryantsmith.com">web page designer </a> <a href="http://www.bryantsmith.com">bryant smith</a></div>
+
+        <button id="installBtn" onclick="install()" disabled > 
+          Install PWA 
+      </button>
 </body>
 </html>
